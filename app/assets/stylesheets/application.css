@@ -1,7 +1,53 @@
+body{
+  margin: 0;
+}
+#title{
+  color:#4eb74b;
+  position: absolute;
+  margin-left: 175px;
+  margin-top: -100px;
+
+  font-size: 60px;
+  font-family: 'Vesper Libre', serif;
+  letter-spacing: 5px;
+}
+
 .nav-bar{
-  display: inline-block;
+  display: inline;
+}
+
+.links{
+  position: relative;
+  top: -48%;
+  right: -60%;
+  font-size: 25px;
+  font-style: none;
+
 }
 
 #nav-bar-main{
-  background-color:
+  display: inline-block;
+  background-color:#212121;
+  width: 110%;
+  margin-top: -20px;
+  height: 130px;
 }
+
+#logo{
+  padding-top: 28px;
+  padding-left: 20px;
+}
+
+.nav-bar{
+  color: #efefef;
+  text-decoration: none;
+  margin: 10px;
+  border-right: 3px solid #efefef;;
+  padding-right: 25px;
+}
+
+.no-thing{
+   border-right: none;
+}
+
+

@@ -5,20 +5,23 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/css?family=Vesper+Libre:500,700" rel="stylesheet">
 </head>
 <body>
-  <div id='nav-bar-main'>
-    <h1 class="title">Boardsy</h1>
+  <nav id='nav-bar-main'>
+    <div id='logo'><%= image_tag('d20',size:'75x90', :alt => "logo") %></div>
+    <h1 id="title">Boardsy</h1>
+    <div class='links'>
     <a class="nav-bar" href='/games'>Home</a>
-
     <% if session[:user_id].nil? %>
       <a class="nav-bar" href='/games'>Login</a>
-      <a class="nav-bar" href='/games'>Register</a>
+      <a class="nav-bar no-thing" href='/games'>Register</a>
     <% else %>
       <a class="nav-bar" href='/games'><%=@user.name%></a>
-      <a class="nav-bar" href='/games'>Logout</a>
+      <a class="nav-bar no-thing" href='/games'>Logout</a>
     <% end %>
-  </div>
+    </div>
+  </nav>
   <%= yield %>
 
 </body>
