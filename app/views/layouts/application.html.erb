@@ -7,8 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id='nav-bar-main'>
+    <h1 class="title">Boardsy</h1>
+    <a class="nav-bar" href='/games'>Home</a>
 
-<%= yield %>
+    <% if session[:user_id].nil? %>
+      <a class="nav-bar" href='/games'>Login</a>
+      <a class="nav-bar" href='/games'>Register</a>
+    <% else %>
+      <a class="nav-bar" href='/games'><%=@user.name%></a>
+      <a class="nav-bar" href='/games'>Logout</a>
+    <% end %>
+  </div>
+  <%= yield %>
 
 </body>
 </html>

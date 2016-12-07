@@ -1,0 +1,10 @@
+<h1>Games Index</h1>
+
+
+<% @games.each do |game|%>
+  <%= game.title %><br>
+  <div class='cover-images'><%= image_tag(game.image_url,size:'200x200', :alt => "#{game.title} cover") %></div>
+  <%=link_to("Vote Up", "/votes")%>
+  <%=link_to("Vote Down", "/votes")%>
+  <%=link_to("I Own This", "/games")%>
+<%end%>
