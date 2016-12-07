@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Game.create!(title: "Warhammer 40k", description: 'warhammer 40k description' , image_url: 'https://warhammerart.com/wp-content/uploads/2015/10/40k-book-cover-5th-ed.jpg' )
+Game.create!(title: "Dungeons and Dragons", description: 'dnd description' , image_url: "http://www.planetcomicsdirect.com/images/P/DCD463898-01.jpg")
+Game.create!(title: "Settlers of Catan", description: 'SoC description' , image_url: 'https://images-na.ssl-images-amazon.com/images/G/01/toys/detail-page/B000W7JWUA-2-lg.jpg' )
+Game.create!(title: "X-Wing", description: 'X-Wing description' , image_url: "http://mixnmojo.com/galleries/full/full20040606161343.jpg" )

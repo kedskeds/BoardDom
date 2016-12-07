@@ -1,5 +1,5 @@
 feature "visiting the game detail page" do
-  xscenario "the user sees details for a game" do
+  scenario "the user sees details for a game" do
     visit "/"
 
     within(".game-list") do
