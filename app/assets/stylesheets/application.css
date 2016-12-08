@@ -13,10 +13,6 @@ body{
   letter-spacing: 5px;
 }
 
-.nav-bar{
-  display: inline;
-}
-
 .links{
   position: relative;
   top: -48%;
@@ -33,10 +29,28 @@ body{
   display: inline-block;
 }
 
-.buttons{
+.name{
   margin-top: -15px;
+  font-size: auto;
 }
 
+.i-own-this{
+  display: flex;
+  width: 200px;
+  color: #212121;
+  background-color: #4eb74b;
+  margin-left: 20px;
+  height: 40px;
+  text-align: center;
+  text-decoration:none;
+  padding-top: 10px;
+  justify-content: center;
+}
+
+
+.apply-font{
+  font-family: 'Vesper Libre', serif;
+}
 
 .vote-up{
   width: 95px;
@@ -46,13 +60,8 @@ body{
   margin-right: 5px;
   text-align: center;
   height: 30px;
-  color: #efefef;
+  color: #bababa;
   text-decoration:none;
-  padding-top: 4px;
-}
-
-.apply-font{
-  font-family: 'Vesper Libre', serif;
 }
 
 .vote-down{
@@ -61,25 +70,15 @@ body{
   display: inline-block;
   text-align: center;
   height: 30px;
-  color: #efefef;
+  color: #bababa;
   text-decoration:none;
-  padding-top: 4px;
 }
 
-.i-own-this{
-  display: block;
-  width: 200px;
-  background-color: #4eb74b;
-  margin-top: 10px;
-  margin-left: 20px;
-  height: 30px;
-  text-align: center;
-  color: #efefef;
-  text-decoration:none;
-  padding-top: 4px;
-}
 
 .cover-images{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 20px;
 }
 
@@ -87,7 +86,7 @@ body{
   display: inline-block;
   background-color:#212121;
   width: 110%;
-  margin-top: -20px;
+  margin-top: -75px;
   height: 130px;
 }
 
@@ -97,10 +96,10 @@ body{
 }
 
 .nav-bar{
-  color: #efefef;
+  color:#bababa;
   text-decoration: none;
   margin: 10px;
-  border-right: 3px solid #efefef;;
+  border-right: 3px solid #bababa;;
   padding-right: 25px;
 }
 
@@ -112,8 +111,6 @@ body{
   display: block;
   max-width:200px;
   max-height:200px;
-  margin:auto;
-
 }
 
 .cover-images{
@@ -136,13 +133,13 @@ body{
 }
 
 .votedown{
-  margin-left: 125px;
-  margin-top: -125px;
+  margin-left: 90px;
+  margin-top: -165px;
 }
 
 .voteup{
-  margin-left: 25px;
-  margin-top: -125px;
+  margin-left: -10px;
+  margin-top: -165px;
 }
 
 .change-color-green{
@@ -152,3 +149,12 @@ body{
 .change-color-red{
   color: red!important;
 }
+
+.fa-plus-circle{
+margin-left: 33px;
+}
+
+.fa-check-circle{
+margin-left: 33px;
+}
+
