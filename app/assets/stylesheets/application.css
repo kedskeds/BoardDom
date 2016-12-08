@@ -1,12 +1,13 @@
 body{
   margin: 0;
+  background-color: #292929;
 }
+
 #title{
   color:#4eb74b;
   position: absolute;
   margin-left: 175px;
   margin-top: -100px;
-
   font-size: 60px;
   font-family: 'Vesper Libre', serif;
   letter-spacing: 5px;
@@ -30,7 +31,52 @@ body{
 
 .game-wrapper {
   display: inline-block;
+}
 
+.buttons{
+  margin-top: -15px;
+}
+
+
+.vote-up{
+  width: 95px;
+  background-color:#4eb74b;
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 5px;
+  text-align: center;
+  height: 30px;
+  color: #efefef;
+  text-decoration:none;
+  padding-top: 4px;
+}
+
+.apply-font{
+  font-family: 'Vesper Libre', serif;
+}
+
+.vote-down{
+  width: 95px;
+  background-color: #4eb74b;
+  display: inline-block;
+  text-align: center;
+  height: 30px;
+  color: #efefef;
+  text-decoration:none;
+  padding-top: 4px;
+}
+
+.i-own-this{
+  display: block;
+  width: 200px;
+  background-color: #4eb74b;
+  margin-top: 10px;
+  margin-left: 20px;
+  height: 30px;
+  text-align: center;
+  color: #efefef;
+  text-decoration:none;
+  padding-top: 4px;
 }
 
 .cover-images{
