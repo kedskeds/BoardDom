@@ -1,10 +1,17 @@
 <h1>Games Index</h1>
 
+<% @games.each_slice(3) do |game| %>
+  <div class='games-row'>
+  <% game.each do |game| %>
+    <div class="game-wrapper">
+      <div class='cover-images'><%= image_tag(game.image_url,size:'200x200', :alt => "#{game.title} cover") %></div>
+      <div class='buttons'>
+      <a class='vote-links vote-up apply-font' href="/votes">Vote Up</a>
+      <a class='vote-links vote-down apply-font' href="/votes">Vote Down</a>
+      <a class='vote-links i-own-this apply-font' href="/games">Vote I Own This</a>
 
-<% @games.each do |game|%>
-  <%= game.title %><br>
-  <div class='cover-images'><%= image_tag(game.image_url,size:'200x200', :alt => "#{game.title} cover") %></div>
-  <%=link_to("Vote Up", "/votes")%>
-  <%=link_to("Vote Down", "/votes")%>
-  <%=link_to("I Own This", "/games")%>
+       </div>
+    </div>
+    <%end%>
+  </div>
 <%end%>
