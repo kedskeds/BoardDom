@@ -4,7 +4,7 @@
 <img src=<%= @game.image_url %> alt=<%= @game.title %> />
 <p><%= @game.description %></p>
 
-<p><%= link_to 'New Comment', new_comment_url %></p>
+<p><%= link_to 'New Comment', new_game_comment_url(@game) %></p>
 
 <ul>
   <% @game.comments.each do |comment| %>

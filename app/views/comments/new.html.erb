@@ -1,5 +1,5 @@
 <h1>Add a Comment</h1>
-<%= form_for(@comment, :url => game_comments_path(@comment)) do |f| %>
+<%= form_for([@game, @comment]) do |f| %>
   <p>
     <%= f.text_area :content %>
   </p>
