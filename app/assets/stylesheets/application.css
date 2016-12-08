@@ -22,7 +22,19 @@ body{
   right: -60%;
   font-size: 25px;
   font-style: none;
+}
 
+.games-row{
+  margin-left: 10%;
+}
+
+.game-wrapper {
+  display: inline-block;
+
+}
+
+.cover-images{
+  margin: 20px;
 }
 
 #nav-bar-main{
