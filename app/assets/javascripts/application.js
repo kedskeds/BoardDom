@@ -54,7 +54,6 @@ $( document ).ready(function(){
     $(this).css('color', '#efefef')
 });
     $(".fa-plus-circle").click(function(){
-      event.preventDefault();
     $(this).removeClass('fa-plus-circle')
     $(this).addClass('fa-check-circle change-color-green')
 });
