@@ -25,7 +25,7 @@
       <a class="nav-bar" href='/users/sign_in'>Login</a>
       <a class="nav-bar no-thing" href='/users/sign_up'>Register</a>
     <% else %>
-      <a class="nav-bar" href='/games'><%=current_user.email%></a>
+      <a class="nav-bar" href="/users/<%=current_user.id%>"><%=current_user.username%></a>
       <%= link_to "Logout", destroy_user_session_path, :method => :delete, :class => "nav-bar"  %>
     <% end %>
     </div>
