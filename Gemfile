@@ -53,6 +53,9 @@ group :development do
   gem 'spring'
 end
 
+# User authentication and password hashing with devise
+gem 'devise'
+
 gem 'simplecov', :require => false, :group => :test
 
 # %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
