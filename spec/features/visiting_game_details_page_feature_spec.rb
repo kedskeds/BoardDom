@@ -1,4 +1,3 @@
-
 feature "visiting the game detail page" do
   scenario "the user sees details for a game" do
 
