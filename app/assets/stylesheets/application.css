@@ -108,4 +108,9 @@ body{
    border-right: none;
 }
 
+.cover-images img{
+  display: block;
+  height:200px;
+  width: 200px;
+}
 
