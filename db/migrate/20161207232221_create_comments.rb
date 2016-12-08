@@ -1,8 +1,8 @@
 class CreateComments < ActiveRecord::Migration
   def change
     create_table :comments do |t|
-      t.string :content
-      t.integer :author_id
+      t.string :content, null: false
+      t.integer :author_id, null: false
       t.references :commentable, polymorphic: true, index: true
       # t.integer :commentable_id
       # t.string :commentable_type
