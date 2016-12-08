@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161208025450) do
+ActiveRecord::Schema.define(version: 20161208181651) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
-    t.string   "content"
-    t.integer  "author_id"
+    t.string   "content",          null: false
+    t.integer  "author_id",        null: false
     t.integer  "commentable_id"
     t.string   "commentable_type"
     t.datetime "created_at",       null: false
@@ -28,11 +28,16 @@ ActiveRecord::Schema.define(version: 20161208025450) do
   add_index "comments", ["commentable_type", "commentable_id"], name: "index_comments_on_commentable_type_and_commentable_id", using: :btree
 
   create_table "games", force: :cascade do |t|
-    t.string   "title"
-    t.string   "description"
-    t.string   "image_url"
+    t.string   "title",       null: false
+    t.string   "description", null: false
+    t.string   "image_url",   null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "games_users", id: false, force: :cascade do |t|
+    t.integer "game_id", null: false
+    t.integer "user_id", null: false
   end
 
   create_table "users", force: :cascade do |t|
