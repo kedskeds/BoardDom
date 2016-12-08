@@ -22,7 +22,7 @@
     <div class='links'>
     <a class="nav-bar" href='/games'>Home</a>
     <% if session[:user_id].nil? %>
-      <a class="nav-bar" href='/games'>Login</a>
+      <a class="nav-bar" href='/login'>Login</a>
       <a class="nav-bar no-thing" href='/games'>Register</a>
     <% else %>
       <a class="nav-bar" href='/games'><%=@user.name%></a>
