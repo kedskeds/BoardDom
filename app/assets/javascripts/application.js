@@ -9,8 +9,48 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
+
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap
 //= require turbolinks
-//= require_tree .
+//= require_tree
+$( document ).ready(function(){
+
+  $(".cover-images").mouseover(function(){
+    $(this).find('img').addClass('overlay')
+    $(this).find('.overlay-text').show();
+});
+  $(".cover-images").mouseout(function(){
+    $(this).find('img').removeClass('overlay')
+    $(this).find('.overlay-text').hide();
+});
+
+  $(".fa-arrow-circle-up").mouseover(function(){
+    $(this).css('color', 'grey')
+});
+  $(".fa-arrow-circle-up").mouseout(function(){
+    $(this).css('color', '#efefef')
+});
+  $(".fa-arrow-circle-up").click(function(){
+    event.preventDefault();
+    $(this).addClass('change-color-green');
+  });
+
+
+  $(".fa-arrow-circle-down").mouseover(function(){
+    $(this).css('color', 'grey')
+});
+  $(".fa-arrow-circle-down").mouseout(function(){
+    $(this).css('color', '#efefef')
+});
+  $(".fa-arrow-circle-down").click(function(){
+    event.preventDefault();
+    $(this).addClass('change-color-red');
+  });
+
+
+})
+
+
+
