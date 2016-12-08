@@ -1,0 +1,8 @@
+<% if user_signed_in? %>
+  <h1> Games You Own </h1>
+  <%@user.games.each do |game| %>
+    <h2><%=game.title %></h2>
+  <% end %>
+<% else %>
+    <h2>YOU'RE NOT LOGGED IN YOU FOOL</h2>
+<% end %>

@@ -1,16 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => { registrations: "registrations"}
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   root 'games#index'
   resources :games do
     resources :comments
   end
-  # resources :comments
-
-  # get 'games/:id/comments' => 'games#show'
-  # get 'games/:id/comments/new' => 'comments#new'
-  # post 'games/:id/comments' => 'comments#create'
+  get 'games/:id/own' => 'games#own'
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
