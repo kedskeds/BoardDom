@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root 'games#index'
   resources :games
   resources :comments
-
+  get 'games/:id/own' => 'games#own'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
