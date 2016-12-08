@@ -8,22 +8,26 @@
       <div>
         <a href="/games/<%=game.id%>">
           <img src=<%=game.image_url%>  alt=".." />
-          <a href="http://example.com">
+          <a href="/games/<%=game.id%>/own">
             <div>
               <span class='overlay-text voteup fa fa-arrow-circle-up fa-4x'></span>
             </div>
           </a>
-
-          <a href="http://example.com">
+          <a href="/games/<%=game.id%>/own">
             <div>
               <span class='overlay-text votedown fa fa-arrow-circle-down fa-4x'></span>
+            </div>
+          </a>
+            <a href="/games/<%=game.id%>/own">
+            <div>
+              <span class="overlay-text fa fa-plus-circle fa-5x" aria-hidden="true"></span>
             </div>
           </a>
         </a>
       </div>
     </div>
-    <div class='buttons'>
-      <a class='vote-links i-own-this apply-font' href="/games">I Own This</a>
+    <div class='name'>
+      <a class='i-own-this apply-font' href="/games/<%=game.id%>"><%= game.title %></a>
     </div>
   </div>
   <%end%>

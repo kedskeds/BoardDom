@@ -33,7 +33,6 @@ $( document ).ready(function(){
     $(this).css('color', '#efefef')
 });
   $(".fa-arrow-circle-up").click(function(){
-    event.preventDefault();
     $(this).addClass('change-color-green');
   });
 
@@ -45,9 +44,21 @@ $( document ).ready(function(){
     $(this).css('color', '#efefef')
 });
   $(".fa-arrow-circle-down").click(function(){
-    event.preventDefault();
     $(this).addClass('change-color-red');
   });
+
+    $(".fa-plus-circle").mouseover(function(){
+    $(this).css('color', 'grey')
+});
+  $(".fa-plus-circle").mouseout(function(){
+    $(this).css('color', '#efefef')
+});
+    $(".fa-plus-circle").click(function(){
+      event.preventDefault();
+    $(this).removeClass('fa-plus-circle')
+    $(this).addClass('fa-check-circle change-color-green')
+});
+
 
 
 })

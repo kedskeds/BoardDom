@@ -8,4 +8,10 @@ class GamesController < ApplicationController
   def show
     @game = Game.find(params[:id])
   end
+
+  def own
+    @user = current_user
+    @game = Game.find(params[:id])
+  end
+
 end
