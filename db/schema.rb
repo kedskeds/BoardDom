@@ -14,25 +14,25 @@
 ActiveRecord::Schema.define(version: 20161207232221) do
 
   # These are extensions that must be enabled in order to support this database
-  enable_extension 'plpgsql'
+  enable_extension "plpgsql"
 
-  create_table 'comments', force: :cascade do |t|
-    t.string   'content'
-    t.integer  'author_id'
-    t.integer  'commentable_id'
-    t.string   'commentable_type'
-    t.datetime 'created_at',       null: false
-    t.datetime 'updated_at',       null: false
+  create_table "comments", force: :cascade do |t|
+    t.string   "content"
+    t.integer  "author_id"
+    t.integer  "commentable_id"
+    t.string   "commentable_type"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
-  add_index 'comments', ['commentable_type', 'commentable_id'], name: 'index_comments_on_commentable_type_and_commentable_id', using: :btree
+  add_index "comments", ["commentable_type", "commentable_id"], name: "index_comments_on_commentable_type_and_commentable_id", using: :btree
 
-  create_table 'games', force: :cascade do |t|
-    t.string   'title'
-    t.string   'description'
-    t.string   'image_url'
-    t.datetime 'created_at',  null: false
-    t.datetime 'updated_at',  null: false
+  create_table "games", force: :cascade do |t|
+    t.string   "title"
+    t.string   "description"
+    t.string   "image_url"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end

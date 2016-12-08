@@ -7,7 +7,7 @@ body{
   color:#4eb74b;
   position: absolute;
   margin-left: 175px;
-  margin-top: -100px;
+  margin-top: -70px;
   font-size: 60px;
   font-family: 'Vesper Libre', serif;
   letter-spacing: 5px;
@@ -110,7 +110,45 @@ body{
 
 .cover-images img{
   display: block;
-  height:200px;
-  width: 200px;
+  max-width:200px;
+  max-height:200px;
+  margin:auto;
+
 }
 
+.cover-images{
+  width:200px;
+  height:200px;
+  background-color: black;
+}
+
+.overlay{
+  opacity: .3;
+}
+
+.overlay-text{
+  position: absolute;
+  margin-left: 75px;
+  margin-top: -100px;
+  color: white;
+  display: none;
+  z-index: 5;
+}
+
+.votedown{
+  margin-left: 125px;
+  margin-top: -125px;
+}
+
+.voteup{
+  margin-left: 25px;
+  margin-top: -125px;
+}
+
+.change-color-green{
+  color: green!important;
+}
+
+.change-color-red{
+  color: red!important;
+}

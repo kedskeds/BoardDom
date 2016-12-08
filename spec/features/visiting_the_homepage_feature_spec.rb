@@ -1,5 +1,5 @@
 feature "visiting the home page" do
-  xscenario "the user sees a list of games" do
+  scenario "the user sees a list of games" do
 
 
     newest_game = Game.create!(title: "Settlers", description: "Settle things", image_url:"https://images-na.ssl-images-amazon.com/images/G/01/toys/detail-page/B000W7JWUA-2-lg.jpg")
