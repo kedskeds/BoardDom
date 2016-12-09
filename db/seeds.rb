@@ -27,7 +27,6 @@ user5 = User.create!(username: "trogdorf", email: 'emsaisdal@gmail.com', passwor
 40.times do
   Vote.create!(voter_id: User.all.sample.id, votable: Game.all.to_a.sample, up: 1)
   Vote.create!(voter_id: User.all.sample.id, votable: Game.all.to_a.sample, up: 0)
-
 end
 
 # 40.times do

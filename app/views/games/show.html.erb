@@ -5,6 +5,7 @@
     <%= render partial: "game_cover", locals: {game: @game} %>
   </div>
  <h1><%=@rating%></h1>
+ <h1><%=@game.votes.count%></h1>
 <p><%= @game.description %></p>
 
 <p><%= link_to 'New Comment', new_game_comment_url(@game) %></p>
