@@ -10,14 +10,11 @@ Rails.application.routes.draw do
   get 'games/:id/own' => 'games#own'
 
   get 'users/:id' => 'users#show'
-  # get 'users' => 'users#index'
 
   get 'votes/new' => 'games#new'
-  post 'games/:votable_id/votes/create' => 'votes#create'
+  post 'votes' => 'votes#create'
 
   get 'search' => 'search#index', as: :search
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
