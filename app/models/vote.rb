@@ -4,4 +4,5 @@ class Vote < ActiveRecord::Base
 
   validates :voter, presence: true
   validates :votable, presence: true
+  validates :up, presence: true
 end
