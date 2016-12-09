@@ -286,6 +286,66 @@ color: green;
   display: none;
 }
 
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+}
+
+.login-header {
+  color: #bababa;
+  margin-bottom: 30px
+}
+
+#new_user {
+  display: block:;
+  margin-right: 30%;
+}
+
+#new_user div {
+  color: #4AAB48 ;
+}
+
+#new_user input {
+  width: 400%;
+  height: 60px;
+  text-align: center;
+}
+
+#login-check-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#login-check-box input {
+  display: flex;
+  flex-direction: row;
+  order: 2;
+}
+
+#login-check-box label {
+  display: inline-block;
+  order: 1;
+  padding-right: 20px;
+}
+
+.shared-links {
+  margin-top: 30px;
+
+}
+
+
+.shared-links a {
+  text-decoration: none;
+  color: #bababa;
+}
+
+
+
+
+
 .show-text{
   font-size: 40px;
   color:#bababa;
@@ -338,3 +398,4 @@ color: green;
     background-color: #212121;
     height:3px;
 }
+
