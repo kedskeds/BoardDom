@@ -2,47 +2,16 @@
 <div class="line-thing"></div>
 
 
-<p class='list-title'>All Games A-Z</p>
-
-<div class='games-row'>
-  <%  @games_alphabetically.each do |game| %>
-    <%= render partial: "game_cover", locals: {game: game} %>
-  <%end%>
-</div>
-<div class="other-line-thing"></div>
+<%= render partial: "games_row", locals: { list_title: "Games A-Z", games: @games_alphabetically }%>
 
 <% if user_signed_in? && !current_user.games.empty? %>
-<p class='list-title'>Owned Games</p>
-<div class='games-row'>
-  <%  @owned_games.each do |game| %>
-    <%= render partial: "game_cover", locals: {game: game} %>
-  <%end%>
-</div>
-<div class="other-line-thing"></div>
+  <%= render partial: "games_row", locals: { list_title: "Owned Games", games: @owned_games }%>
 <% end %>
 
-<p class='list-title'> Best Rated</p>
-<div class='games-row'>
-  <%  @games_by_rating.each do |game| %>
-    <%= render partial: "game_cover", locals: {game: game} %>
-  <%end%>
-</div>
+<%= render partial: "games_row", locals: { list_title: "Best Rated", games: @games_by_rating }%>
+<%= render partial: "games_row", locals: { list_title: "Sci-Fi Games", games: @scifi_games }%>
+<%= render partial: "games_row", locals: { list_title: "Table Top Strategy Games", games: @strategy_games }%>
 
-<div class="other-line-thing"></div>
-<p class='list-title'> Sci-Fi Games</p>
-<div class='games-row'>
-  <%  @scifi_games.each do |game| %>
-    <%= render partial: "game_cover", locals: {game: game} %>
-  <%end%>
-</div>
-
-<div class="other-line-thing"></div>
-<p class='list-title'> Table Top Strategy Games</p>
-<div class='games-row'>
-  <%  @strategy.each do |game| %>
-    <%= render partial: "game_cover", locals: {game: game} %>
-  <%end%>
-</div>
 
 
 
