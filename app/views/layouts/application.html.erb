@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Boardsy</title>
+  <title><%= yield(:title) %></title>
+  <link rel="icon" href="/assets/d20-2e6554e8ac3506ab1be2d9555ad37b6941d2ae53b1eb5985e35070101b374e87.png">
   <script src="https://use.fontawesome.com/679320486e.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -15,10 +16,9 @@
 <body>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-
   <nav id='nav-bar-main'>
      <div id='logo'><img alt="logo" src="/assets/d20-2e6554e8ac3506ab1be2d9555ad37b6941d2ae53b1eb5985e35070101b374e87.png" width="75" height="90"></div>
-    <h1 id="title">Boardsy</h1>
+    <h1 id="title">BoardDom</h1>
     <div class='links'>
       <a class="nav-bar" href='/'
       <a>Home</a>

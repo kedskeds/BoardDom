@@ -1,3 +1,5 @@
+<% content_for :title, "#{@game.title}" %>
+
 <p id="notice"><%= notice %></p>
 
 <h2 class='game-title'><%= @game.title %></h2>
@@ -19,15 +21,25 @@
 
 <p class='show-text description-text'>Description:<div class='game-description '><%= @game.description %></div></p>
 
-<p><%= link_to 'New Comment', new_game_comment_url(@game) %></p>
+<div class="other-line-thing"></div>
+<p class='show-text review'>Reviews</p>
+<% if user_signed_in? %>
+<div class='new-comment-form'><%= render partial: "new_comment_form" %></div>
 
-<ul>
-  <% @game.comments.each do |comment| %>
-  <li><%= comment.author.username %> - <%= comment.content %></li>
-  <% end %>
-</ul>
+  <ul>
+    <% @game.comments.each do |comment| %>
+    <li class='user-comment show-text'><div class='comment-name'><%= comment.author.username %></div><div class='comment-liked'>
 
-<p><%= link_to 'New Game', new_game_path %></p>
-<p><%= link_to 'Back', games_path %></p>
+    <% if @game.votes.where(voter_id: comment.author_id).first.up == 1%>
+        This user liked this game
+    <% elsif @game.votes.where(voter_id: comment.author_id).first.up == 0%>
+        This user disliked this game
+    <% end %>
+
+    </div> "<%= comment.content%>"</li>
+    <% end %>
+  </ul>
+<% end %>
+
 
 

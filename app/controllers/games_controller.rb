@@ -9,6 +9,7 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
+    @comment = Comment.new
     @rating = @game.rating
   end
 
