@@ -1,6 +1,6 @@
 <h1 class='index-title'>Games Index</h1>
 <div class="line-thing"></div>
-
+<% content_for :title, "BoardDom" %>
 
 <%= render partial: "games_row", locals: { list_title: "Games A-Z", games: @games_alphabetically }%>
 

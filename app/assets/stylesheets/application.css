@@ -413,7 +413,6 @@ color: green;
   margin-left: 0 auto}
 
 
-
 .show-text{
   font-size: 40px;
   color:#bababa;
@@ -492,10 +491,52 @@ color: green;
   font-size: 30px;
 }
 
-.search-container {
-}
-
 .search-result {
   padding-top: 25px;
  float: left;
 }
+
+.comment-text :nth-child(1){
+  width: 400px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.new-comment-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+}
+.comment-button :nth-child(1){
+  width: 400px;
+  margin-top: -10px;
+  height: 40px;
+}
+.user-comment{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+}
+.comment-name{
+  font-weight: 400;
+}
+.comment-liked{
+  margin-top: -8px;
+  font-weight: 200;
+  font-size: 20px;
+}
+
+.review{
+  margin-top: 20px;
+  margin-bottom: -40px;
+  display: flex;
+  font-size: 45px;
+  flex-direction: column;
+  align-items: center;
+  font-weight:400;
+}
+
