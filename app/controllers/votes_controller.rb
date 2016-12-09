@@ -4,7 +4,12 @@ class VotesController < ApplicationController
   def create
     @game = Game.find(params[:votable_id])
     vote = Vote.create(voter_id: current_user.id, votable: @game, up: params[:up])
-    puts vote.errors.to_hash
-    redirect_to "/"
+    # if vote.valid
+      redirect_to "/"
+    # else
+    #   # @vote_errors = vote.errors.full_messages
+    #   render
+    # end
+
   end
 end
