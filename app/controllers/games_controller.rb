@@ -2,7 +2,7 @@ class GamesController < ApplicationController
 
   def index
     @games_alphabetically = Game.order(:title)
-    @liked_games = current_user.games.all
+    (@owned_games = current_user.games.all) if user_signed_in?
   end
 
   def show

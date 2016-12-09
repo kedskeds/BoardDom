@@ -4,7 +4,8 @@
   <div>
     <%= render partial: "game_cover", locals: {game: @game} %>
   </div>
-
+ <h1><%=@game.votes.count%></h1>
+ <h1><%=@game.votes.where(up: true).count%></h1>
 <p><%= @game.description %></p>
 
 <p><%= link_to 'New Comment', new_game_comment_url(@game) %></p>

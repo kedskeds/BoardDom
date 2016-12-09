@@ -15,7 +15,7 @@
 <% if user_signed_in? %>
 <p>Liked Games</p>
 <div class='games-row'>
-  <%  @liked_games.each do |game| %>
+  <%  @owned_games.each do |game| %>
     <%= render partial: "game_cover", locals: {game: game} %>
   <%end%>
 </div>
