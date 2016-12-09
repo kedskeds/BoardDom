@@ -1,0 +1,8 @@
+<p class='list-title'><%= list_title %></p>
+<div class='games-row'>
+  <%  games.each do |game| %>
+    <%= render partial: "game_cover", locals: {game: game} %>
+  <%end%>
+</div>
+<div class="other-line-thing"></div>
+

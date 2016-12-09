@@ -1,11 +1,12 @@
 class GamesController < ApplicationController
   def index
+    # @games = Game.all
     @games_alphabetically = Game.order(:title)
     (@owned_games = current_user.games.all) if user_signed_in?
 
     @games_by_rating = Game.all.sort_by {|game| -game.votes.where(up: true).count }
     @scifi_games = Game.where(genre: 'Sci-Fi')
-    @strategy = Game.where(category: 'Table Top Strategy')
+    @strategy_games = Game.where(category: 'Table Top Strategy')
   end
 
   def show

@@ -1,11 +1,24 @@
-<h1>Search Results</h1>
+<h1 class='index-title'>Search Results</h1>
+<div class="line-thing"></div>
 <div class="search-container">
+
   <% @users.each do |user| %>
     <div class="search-result">
-      <img src="<%= user.avatar %>" />
-      <a href="/users/<%= user.id %>"><%= user.username %></a>
+      <div class="game-wrapper">
+        <div class="game-wrapper-overlay">
+        </div>
+          <div class='cover-images'>
+            <img src="<%= user.avatar %>" />
+          </div>
+
+        <div class='name'>
+          <a class='i-own-this apply-font' href="/users/<%= user.id %>"><%= user.username %></a>
+        </div>
+
+        </div>
     </div>
   <% end %>
+
   <% @games.each do |game| %>
     <div class="search-result">
       <%= render partial: "game_cover", locals: {game: game} %>
