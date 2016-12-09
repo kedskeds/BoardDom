@@ -1,8 +1,9 @@
 <h1>Search Results</h1>
 <div class="users-container">
-  <%= @users.each do |user| %>
+  <% @users.each do |user| %>
     <div class="search-result">
-      <%= user.username %>
+      <img src="<%= user.avatar %>" />
+      <a href="/users/<%= user.id %>"><%= user.username %></a>
     </div>
   <% end %>
 </div>
