@@ -235,7 +235,40 @@ color: green;
   background-color: red;
 }
 
+#username-heading {
+    position: relative;
+    left: 500px;
+    bottom: 300px;
+    color: #4AAB48;
+    font-family: 'Vesper Libre', serif;
+}
 
+#user-stats {
+  color: #bababa;
+  position: relative;
+  left: 640px;
+  bottom: 268px;
+
+
+}
+
+#user-bio {
+  color: #bababa;
+  width: 250px;
+  position: relative;
+  left: 325px;
+  bottom: 400px;
+}
+
+#bio-heading {
+  position: relative;
+  left: 55px;
+}
+
+#stats-heading {
+  position: relative;
+  left: 57px;
+}
 
 
 
