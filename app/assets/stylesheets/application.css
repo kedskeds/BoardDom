@@ -466,6 +466,18 @@ color: green;
     background-color: #212121;
     height:3px;
 }
+.unclickable{
+  pointer-events: none;
+}
+.red{
+  color: red;
+  margin-left: 73px;
+}
+.green{
+  color: green;
+  margin-left: 73px;
+}
+
 .description-text{
   margin-top: -260px;
   margin-left: 60%;
