@@ -14,3 +14,9 @@
 </div>
 <!-- @user.votes.count -->
 <!-- @user.votes.where(up: true).each do |game| ...game partial... end -->
+<p class='list-title user-owned-games'>Owned Games</p>
+<div class='games-row'>
+  <%  @owned_games.each do |game| %>
+    <%= render partial: "game_cover", locals: {game: game} %>
+  <%end%>
+</div>

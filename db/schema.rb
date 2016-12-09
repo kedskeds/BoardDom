@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 20161209053538) do
   add_index "users", ["unlock_token"], name: "index_users_on_unlock_token", unique: true, using: :btree
 
   create_table "votes", force: :cascade do |t|
-    t.boolean  "up",           null: false
+    t.integer  "up",           null: false
     t.integer  "voter_id",     null: false
     t.integer  "votable_id"
     t.string   "votable_type"

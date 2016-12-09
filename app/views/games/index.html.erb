@@ -1,25 +1,49 @@
-<h1>Games Index</h1>
+<h1 class='index-title'>Games Index</h1>
+<div class="line-thing"></div>
 
-<%= form_tag(users_path, :method => "get", id: "search-form") do %>
-    <%= text_field_tag :search, params[:search], placeholder: "Search Users" %>
-    <%= submit_tag "Search", :name => nil %>
-<% end %>
 
-<p>Games A-Z</p>
+<p class='list-title'>Games A-Z</p>
+
 <div class='games-row'>
   <%  @games_alphabetically.each do |game| %>
     <%= render partial: "game_cover", locals: {game: game} %>
   <%end%>
 </div>
+<div class="other-line-thing"></div>
 
 <% if user_signed_in? %>
-<p>Liked Games</p>
+<p class='list-title'>Owned Games</p>
 <div class='games-row'>
   <%  @owned_games.each do |game| %>
     <%= render partial: "game_cover", locals: {game: game} %>
   <%end%>
 </div>
+<div class="other-line-thing"></div>
 <% end %>
+
+<p class='list-title'> Best Rated</p>
+<div class='games-row'>
+  <%  @games_by_rating.each do |game| %>
+    <%= render partial: "game_cover", locals: {game: game} %>
+  <%end%>
+</div>
+
+<div class="other-line-thing"></div>
+<p class='list-title'> Sci-Fi Games</p>
+<div class='games-row'>
+  <%  @scifi_games.each do |game| %>
+    <%= render partial: "game_cover", locals: {game: game} %>
+  <%end%>
+</div>
+
+<div class="other-line-thing"></div>
+<p class='list-title'> Table Top Strategy Games</p>
+<div class='games-row'>
+  <%  @strategy.each do |game| %>
+    <%= render partial: "game_cover", locals: {game: game} %>
+  <%end%>
+</div>
+
 
 
 

@@ -16,8 +16,15 @@ RSpec.describe Game, type: :model do
   end
 
   context "active record" do
+    context 'validations' do
+      it { should validate_presence_of(:title) }
+      it { should validate_presence_of(:description) }
+    end
+    context 'associations' do
       it { should have_many(:comments) }
+      it { should have_many(:votes) }
       it { should have_and_belong_to_many(:users) }
+    end
   end
 
 end
