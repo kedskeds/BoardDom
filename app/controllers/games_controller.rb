@@ -1,18 +1,16 @@
 class GamesController < ApplicationController
   def index
-    # @games = Game.all
-    @games_alphabetically = Game.order(:title)
+    @games_alphabetically = Game.alphabetize
     (@owned_games = current_user.games.all) if user_signed_in?
-
-    @games_by_rating = Game.all.sort_by {|game| -game.votes.where(up: true).count }
-    @scifi_games = Game.where(genre: 'Sci-Fi')
-    @strategy_games = Game.where(category: 'Table Top Strategy')
+    @games_by_rating = Game.sort_by_rating
+    @scifi_games = Game.scifi
+    @strategy_games = Game.strategy
   end
 
   def show
     @game = Game.find(params[:id])
     @comment = Comment.new
-    @rating = ((@game.votes.where(up: 1).count.to_f / @game.votes.count.to_f ) * 100).round(2)
+    @rating = @game.rating
   end
 
   def own

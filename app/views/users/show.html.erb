@@ -1,32 +1,77 @@
-<% content_for :title, "#{@user.username}" %>
-<h1 id="username-heading"><%= @user.username %></h1>
-<div id="stats-container">
-  <div id="user-avatar">
-    <img src=<%= @user.avatar %> />
-  </div>
-  <div id="stats-subcontainer">
-    <div id="user-stats">
-      <h2 id="stats-heading">Stats</h2>
-      <ul >
-        <li><%=@user.email %></li>
-        <li><%= @user.location %></li>
-        <li>User since: <%= @user.created_at.strftime("%B %e, %Y") %></li>
-      </ul>
-    </div>
-    <div id="user-bio">
-      <h2 id="bio-heading">Bio</h2>
-      <p><%= @user.bio%></p>
-    </div>
-  </div>
-</div>
-<!-- @user.votes.count -->
-<!-- @user.votes.where(up: true).each do |game| ...game partial... end -->
-<div id="user-owned-games">
-<p class='list-title user-owned-games'>Owned Games</p>
-<div id="show-page-owned-games" class='games-row'>
 
-  <%  @owned_games.each do |game| %>
-    <%= render partial: "game_cover", locals: {game: game} %>
-  <%end%>
-</div>
+<% content_for :title, "#{@user.username}" %>
+
+<h1 class='index-title'>User Profile for <%= @user.username %></h1>
+<div class="line-thing"></div>
+
+<div class="profile-container">
+  <div class="user-info-container">
+
+    <div class="avatar-container">
+      <img src=<%= @user.avatar %> />
+    </div>
+
+    <table class="stats-table">
+    <tr>
+      <th colspan="2" style="text-align:center;color:lightgray;text-transform:none; font-weight: normal; font-size:200%;">
+      User Stats
+      <% if @user.id == current_user.id %>
+        <div style="font-size:16px; display:inline; padding-left:20px">
+        <%= link_to "Update", edit_user_registration_path, :method => :get  %>
+        </div>
+      <% end %>
+      </th>
+
+
+    </tr>
+      <tr>
+        <th>Email</th>
+        <td><%=@user.email %></td>
+      </tr>
+      <tr>
+        <th>Location</th>
+        <td>
+          <% if @user.location %>
+            <%= @user.location %>
+          <% else %>
+            Not specified
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <th>Gaming Since</th>
+        <td><%=@user.created_at.strftime("%B %e, %Y") %></td>
+      </tr>
+      <tr>
+        <th>Total Votes</th>
+        <td><%=@user.votes.count %></td>
+      </tr>
+    </table>
+
+    <div class="bio-container">
+      <h2>Bio</h2>
+      <p>
+        <% if @user.bio %>
+          <%= @user.bio %>
+        <% else %>
+          <%= @user.username %> doesn't have a bio just yet.
+        <% end %>
+      </p>
+    </div>
+
+  </div>
+  <div class="search-container owned-games-container">
+    <p class='list-title user-owned-games'>
+      Owned Games
+    </p>
+
+
+      <%  @owned_games.each do |game| %>
+      <div class="search-result" >
+        <%= render partial: "game_cover", locals: {game: game} %>
+      </div>
+      <%end%>
+
+
+  </div>
 </div>
