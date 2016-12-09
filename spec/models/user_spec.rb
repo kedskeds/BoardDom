@@ -24,13 +24,6 @@ RSpec.describe User, type: :model do
       last_user = User.last
       expect(last_user).to eq(user)
     end
-    xdescribe 'rating' do
-      it 'returns the user rating of the game as a percentage' do
-        user.save!
-        last_user = User.last
-        expect(last_user.rating).to eq(0)
-      end
-    end
   end
 
   context 'user is invalid' do
