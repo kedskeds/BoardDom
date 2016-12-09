@@ -3,4 +3,7 @@ class Game < ActiveRecord::Base
 
   has_many :comments, as: :commentable
   has_many :votes, as: :votable
+
+  validates :title, presence: true
+  validates :description, presence: true
 end

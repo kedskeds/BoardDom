@@ -9,7 +9,7 @@ RSpec.describe Vote, type: :model do
                      votable_type: :game )
 
    it 'has an up attribute' do
-    expect(vote).to have_attributes(up: true)
+    expect(vote).to have_attributes(up: 1)
    end
   end
 
