@@ -50,8 +50,8 @@
 
   <div id="under-edit">
 
-    <p><%= button_to "Cancel my account", registration_path( resource_name  ), data: { confirm: "Are you sure?" }, method: :delete %></p>
+    <%= button_to "Cancel My Account", registration_path( resource_name  ), data: { confirm: "Are you sure?" }, method: :delete %>
 
-    <%= link_to "Back", :back %>
+    <%= button_to "Back", :back, class: "back-button" %>
   </div>
 </div>
