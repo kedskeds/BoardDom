@@ -235,7 +235,10 @@ color: green;
 
 /*USER PROFILE STYLES*/
 #user-avatar img{
-  height: 400px
+  height: 400px;
+  padding-left: 5%;
+  border-style: solid;
+  border-width: 10px;
 }
 
 #username-heading {
@@ -245,7 +248,31 @@ color: green;
   font-family: 'Vesper Libre', serif;
 }
 
+#stats-container {
+  display: flex;
+  flex-direction: row;
 }
+
+#stats-subcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #bababa;
+  padding-top: 3%
+}
+
+#user-bio {
+  max-width: 30%;
+}
+
+#user-owned-games {
+  padding-top: 26%
+}
+
+#user-owned-games p {
+  padding-bottom: 10px
+}
+
 #user-stats {
   /*color: #bababa;
   position: relative;
