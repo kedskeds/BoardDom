@@ -332,6 +332,10 @@ color: green;
     margin-top: 120px;
 }
 
+.edit-container {
+  margin-top: 60px
+}
+
 .login-header {
   color: #bababa;
   margin-bottom: 30px;
@@ -348,6 +352,13 @@ color: green;
 }
 
 #new_user input {
+  width: 700px;
+  height: 60px;
+  text-align: center;
+  padding: 20px;
+}
+
+#edit_user input{
   width: 700px;
   height: 60px;
   text-align: center;
