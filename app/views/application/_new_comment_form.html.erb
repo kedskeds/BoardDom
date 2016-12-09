@@ -1,0 +1,9 @@
+<%= form_for([@game, @comment]) do |f| %>
+  <p class='comment-text'>
+    <%= f.text_area :content %>
+  </p>
+
+  <p class='comment-button'>
+    <%= f.submit "Add a review" %>
+  </p>
+<% end %>
