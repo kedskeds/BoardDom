@@ -2,24 +2,24 @@
   <div class="game-wrapper-overlay">
     <% if user_signed_in? %>
     <% if game.votes.where(voter_id: current_user.id).empty? %>
-    <a data-method='post' href="/games/<%=game.id%>/votes/create?up=1">
+    <a data-method='post' href="votes?votable_id=<%=game.id%>&up=1">
       <div>
         <span class='overlay-text voteup fa fa-arrow-circle-up fa-4x'></span>
       </div>
     </a>
-    <a data-method='post' href="/games/<%=game.id%>/votes/create?up=0">
+    <a data-method='post' href="votes?votable_id=<%=game.id%>&up=0">
       <div>
         <span class='overlay-text votedown fa fa-arrow-circle-down fa-4x'></span>
       </div>
     </a>
     <% elsif game.votes.where(voter_id: current_user.id).last.up == 1 %>
-      <a data-method='post' href="/games/<%=game.id%>/votes/create?up=1">
+      <a data-method='post' href="votes?votable_id=<%=game.id%>&up=1">
         <div>
           <span class='unclickable green overlay-text voteup fa fa-arrow-circle-up fa-4x'></span>
         </div>
       </a>
     <% elsif game.votes.where(voter_id: current_user.id).last.up == 0 %>
-    <a data-method='post' href="/games/<%=game.id%>/votes/create?up=0">
+    <a data-method='post' href="votes?votable_id=<%=game.id%>&up=0">
       <div>
         <span class='unclickable red overlay-text votedown fa fa-arrow-circle-down fa-4x'></span>
       </div>
