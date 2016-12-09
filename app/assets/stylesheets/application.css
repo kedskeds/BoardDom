@@ -484,5 +484,6 @@ color: green;
 }
 
 .search-result {
+  padding-top: 25px;
  float: left;
 }
