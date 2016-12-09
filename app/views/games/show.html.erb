@@ -15,7 +15,9 @@
 
 <p class='show-text category-text'>Type:<p class='rating category'><%=@game.category%></p ></p>
 
-<p ><%= @game.description %></p>
+
+
+<p class='show-text description-text'>Description:<div class='game-description '><%= @game.description %></div></p>
 
 <p><%= link_to 'New Comment', new_game_comment_url(@game) %></p>
 
