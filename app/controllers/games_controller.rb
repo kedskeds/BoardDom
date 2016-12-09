@@ -4,6 +4,8 @@ class GamesController < ApplicationController
     @games_alphabetically = Game.order(:title)
     (@owned_games = current_user.games.all) if user_signed_in?
     @games_by_rating = Game.all.sort{|game1, game2| game1.votes.where(up: 1).count <=> game2.votes.where(up: 1).count}
+    @scifi_games = Game.where(genre: 'Sci-Fi')
+    @strategy = Game.where(category: 'Table Top Strategy')
 end
 
   def show

@@ -1,20 +1,24 @@
 <h1 class='index-title'>Games Index</h1>
+<div class="line-thing"></div>
 
 
 <p class='list-title'>Games A-Z</p>
+
 <div class='games-row'>
   <%  @games_alphabetically.each do |game| %>
     <%= render partial: "game_cover", locals: {game: game} %>
   <%end%>
 </div>
+<div class="other-line-thing"></div>
 
 <% if user_signed_in? %>
-<p class='list-title'>Liked Games</p>
+<p class='list-title'>Owned Games</p>
 <div class='games-row'>
   <%  @owned_games.each do |game| %>
     <%= render partial: "game_cover", locals: {game: game} %>
   <%end%>
 </div>
+<div class="other-line-thing"></div>
 <% end %>
 
 <p class='list-title'> Best Rated</p>
@@ -23,4 +27,23 @@
     <%= render partial: "game_cover", locals: {game: game} %>
   <%end%>
 </div>
+
+<div class="other-line-thing"></div>
+<p class='list-title'> Sci-Fi Games</p>
+<div class='games-row'>
+  <%  @scifi_games.each do |game| %>
+    <%= render partial: "game_cover", locals: {game: game} %>
+  <%end%>
+</div>
+
+<div class="other-line-thing"></div>
+<p class='list-title'> Table Top Strategy Games</p>
+<div class='games-row'>
+  <%  @strategy.each do |game| %>
+    <%= render partial: "game_cover", locals: {game: game} %>
+  <%end%>
+</div>
+
+
+
 

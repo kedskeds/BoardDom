@@ -35,7 +35,6 @@ body{
   width
 }
 
-
 .index-title{
   margin-top: 20px;
   color:#bababa;
@@ -47,7 +46,7 @@ body{
   margin-right: 40px;
 }
 .list-title{
-  margin-top: 50px;
+  margin-top: 20px;
   color:#bababa;
   font-size: 20px;
   font-weight: 300;
@@ -230,11 +229,9 @@ color: green;
   border: 2px solid red;
   z-index: 11;
 }
-
 #red {
   background-color: red;
 }
-
 #username-heading {
     position: relative;
     left: 500px;
@@ -242,16 +239,12 @@ color: green;
     color: #4AAB48;
     font-family: 'Vesper Libre', serif;
 }
-
 #user-stats {
   color: #bababa;
   position: relative;
   left: 640px;
   bottom: 268px;
-
-
 }
-
 #user-bio {
   color: #bababa;
   width: 250px;
@@ -259,19 +252,89 @@ color: green;
   left: 325px;
   bottom: 400px;
 }
-
 #bio-heading {
   position: relative;
   left: 55px;
 }
-
 #stats-heading {
   position: relative;
   left: 57px;
 }
+.user-owned-games{
+  margin-top: -320px;
+}
+.game-title{
+  font-size: 50px;
+  margin-top: 20px;
+  color:#bababa;
+  font-weight: lighter;
+  letter-spacing: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 40px;
+}
+.game-photo{
+  display: flex;
+  justify-content: center;
+  margin-top: 140px;
+  float: left;
+  margin-left: 75px;
+  transform: scale(2, 2);
+}
+.game-photo .name{
+  display: none;
+}
 
+.show-text{
+  font-size: 40px;
+  color:#bababa;
+  font-weight: 200;
+  letter-spacing: 3px;
+}
+.rating-text{
+  margin-top: 60px;
+  margin-left: 450px;
+}
+.category-text{
+  margin-top: 35px;
+  margin-left: 450px;
+}
+.genre-text{
+  margin-top: -40px;
+  margin-left: 450px;
+}
+.rating{
+  font-size: 40px;
+  margin-top: -75px;
+  color:#bababa;
+  font-weight: 400;
+  letter-spacing: 3px;
+  margin-left: 760px;
+}
+.genre{
+  margin-left: 590px;
+}
+.category{
+  margin-left: 570px;
+}
 
-
-
-
-
+.line-thing {
+    display:flex;
+    width: 80%;
+    margin-left: 130px;
+    border:none;
+    color:white;
+    height:1px;
+    background:black;
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#bababa), to(#292929));
+}
+.other-line-thing {
+  margin-top: 20px;
+    display:flex;
+    width: 80%;
+    margin-left: 130px;
+    border:none;
+    background-color: #212121;
+    height:3px;
+}
