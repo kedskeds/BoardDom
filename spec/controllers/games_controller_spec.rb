@@ -13,9 +13,9 @@ describe GamesController do
       expect(response).to render_template(:index)
     end
 
-    it "assigns the recent games as @games" do
-      get :index
-      expect(assigns(:games)).to eq Game.all
-    end
+    # it "assigns the recent games as @games" do
+    #   get :index
+    #   expect(assigns(:games)).to eq Game.all
+    # end
   end
 end
