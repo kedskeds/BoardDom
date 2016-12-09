@@ -1,12 +1,12 @@
 <div class="game-wrapper">
     <div class="game-wrapper-overlay">
       <% if user_signed_in? %>
-        <a href="/games/<%=game.id%>/votes/create?up=true">
+        <a data-method='post' href="/games/<%=game.id%>/votes/create?up=true">
           <div>
             <span class='overlay-text voteup fa fa-arrow-circle-up fa-4x'></span>
           </div>
         </a>
-        <a href="/games/<%=game.id%>/votes/create?up=false">
+        <a data-method='post' href="/games/<%=game.id%>/votes/create?up=false">
           <div>
             <span class='overlay-text votedown fa fa-arrow-circle-down fa-4x'></span>
           </div>
