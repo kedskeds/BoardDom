@@ -402,6 +402,10 @@ color: green;
     margin-top: 120px;
 }
 
+.edit-container {
+  margin-top: 40px
+}
+
 .login-header {
   color: #bababa;
   margin-bottom: 30px;
@@ -417,10 +421,43 @@ color: green;
   color: #4AAB48 ;
 }
 
+#under-edit {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+#under-edit form {
+  margin-right: 100px;
+  width: 30%;
+}
+
+
+#edit_user div {
+  color: #4AAB48 ;
+}
+
 #new_user input {
   width: 700px;
   height: 60px;
-  text-align: center;
+  padding: 20px;
+}
+
+.edit_user div.actions {
+  margin-top: 10px
+}
+
+#under-edit > form:nth-child(2) > input.back-button {
+  width: 160px
+}
+
+#new_user > div.actions > input[type="submit"] {
+  margin-top: 20px
+}
+
+#edit_user input{
+  width: 700px;
+  height: 60px;
   padding: 20px;
 }
 
