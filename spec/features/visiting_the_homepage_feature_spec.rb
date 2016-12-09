@@ -6,7 +6,7 @@ feature "visiting the home page" do
 
     visit "/"
     within("body") do
-      expect(page).to have_content "Vote Up"
+      expect(page).to have_content "Settlers"
       # expect(page).to have_content ...other content
       page.click_link('', :href => "/games/#{newest_game.id}")
     end

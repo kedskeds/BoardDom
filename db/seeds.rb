@@ -18,5 +18,6 @@ game2 = Game.create!(title: "Pandemic", description: 'pandemic description' , im
 game1 = Game.create!(title: "Warhammer", description: 'warhammer description' , image_url: "https://upload.wikimedia.org/wikipedia/en/c/cc/Warhammer_8th_Edition_Cover.jpg" )
 
 user = User.create!(username: "slagathor", email: 'email@gmail.com', password:'password', password_confirmation: 'password')
+
 user.games << game1
 user.games << game2
