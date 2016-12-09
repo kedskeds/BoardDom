@@ -24,8 +24,10 @@ body{
   margin-left: 175px;
   margin-top: -70px;
   font-size: 60px;
-  font-family: 'Vesper Libre', serif;
-  letter-spacing: 5px;
+  /*font-family: 'Vesper Libre', serif;*/
+  font-family: 'Bitter', serif;
+  letter-spacing: 3px;
+  font-weight:100;
 }
 .search-bar{
   display: flex;
@@ -83,8 +85,12 @@ body{
 .i-own-this{
   display: flex;
   width: 200px;
-  color: #212121;
-  background-color: #4eb74b;
+  color: #bababa;
+  /*background-color:#212121;*/
+  font-weight:100;
+  letter-spacing:2px;
+  /*color: #212121;*/
+  /*background-color: #4eb74b;*/
   height: 40px;
   text-align: center;
   text-decoration:none;
