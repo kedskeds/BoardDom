@@ -5,7 +5,7 @@ class VotesController < ApplicationController
     @game = Game.find(params[:votable_id])
     vote = Vote.create(voter_id: current_user.id, votable: @game, up: params[:up].to_i)
     # if vote.valid
-      redirect_to "/"
+      redirect_to :back
     # else
     #   # @vote_errors = vote.errors.full_messages
     #   render
