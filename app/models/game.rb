@@ -7,27 +7,13 @@ class Game < ActiveRecord::Base
   validates :title, presence: true
   validates :description, presence: true
 
+  scope :search, -> (title) { where("title ILIKE ? OR description ILIKE ?", "%#{title}%", "%#{title}%") }
+  scope :alphabetize, -> { order(:title) }
+  scope :sort_by_rating, -> { all.sort_by { |game| -game.rating } }
+  scope :scifi, -> { where(genre: 'Sci-Fi') }
+  scope :strategy, -> { where(category: 'Table Top Strategy') }
+
   def rating
     ((votes.where(up: 1).count.to_f / votes.count.to_f ) * 100).round(2)
-  end
-
-  def self.search(search)
-    where("title ILIKE ? OR description ILIKE ?", "%#{search}%", "%#{search}%")
-  end
-
-  def self.alphabetize
-    Game.order(:title)
-  end
-
-  def self.sort_by_rating
-    Game.all.sort_by {|game| -game.rating }
-  end
-
-  def self.scifi
-    Game.where(genre: 'Sci-Fi')
-  end
-
-  def self.strategy
-    Game.where(category: 'Table Top Strategy')
   end
 end
