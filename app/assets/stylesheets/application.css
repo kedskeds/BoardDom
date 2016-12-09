@@ -333,7 +333,7 @@ color: green;
 }
 
 .edit-container {
-  margin-top: 60px
+  margin-top: 40px
 }
 
 .login-header {
@@ -348,6 +348,26 @@ color: green;
 }
 
 #new_user div {
+  color: #4AAB48 ;
+}
+
+#under-edit {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+#under-edit form {
+  margin-right: 100px;
+}
+
+#under-edit a{
+  text-decoration: none;
+  color: #bababa;
+  font-size: 20px;
+}
+
+#edit_user div {
   color: #4AAB48 ;
 }
 
