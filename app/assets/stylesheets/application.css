@@ -480,3 +480,9 @@ color: green;
   font-size: 30px;
 }
 
+.search-container {
+}
+
+.search-result {
+ float: left;
+}
