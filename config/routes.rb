@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   resources :games do
     resources :comments
   end
+
   get 'games/:id/own' => 'games#own'
+  get 'votes/new' => 'games#new'
+  post 'games/:votable_id/votes/create' => 'votes#create'
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

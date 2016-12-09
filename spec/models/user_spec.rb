@@ -44,6 +44,7 @@ RSpec.describe User, type: :model do
    end
    context 'associations' do
      it { should have_many(:comments) }
+     it { should have_many(:votes) }
      it { should have_and_belong_to_many(:games) }
    end
  end
