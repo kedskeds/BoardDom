@@ -7,6 +7,7 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
+    @rating = ((@game.votes.where(up: 1).count.to_f / @game.votes.count.to_f ) * 100).round(2)
   end
 
   def own
