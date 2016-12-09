@@ -13,6 +13,7 @@ body{
   padding: 0px;
   overflow-x: hidden;
   background-color: #292929;
+  color:#bababa;
 }
 .slick-track {
   margin: 0 auto;
@@ -212,6 +213,9 @@ margin-top: 100px;
 pointer-events: none;
 color: green;
 }
+.center-arrow{
+  margin-left: 74px;
+}
 
 .change-color-green{
   color: green!important;
@@ -373,12 +377,19 @@ color: green;
   margin-right: 10%;
 }
 
-
 .shared-links a {
   text-decoration: none;
   color: #bababa;
 }
-
+.unclickable{
+  pointer-events: none;
+}
+.red{
+  color: red;
+}
+.green{
+  color: green;
+}
 
 /* User Login page*/
 
@@ -454,5 +465,18 @@ color: green;
     border:none;
     background-color: #212121;
     height:3px;
+}
+.description-text{
+  margin-top: -260px;
+  margin-left: 60%;
+}
+.game-description{
+  display: flex;
+  font-weight: 300;
+  text-indent: 250px;
+  margin-top: -65px;
+  margin-left: 60%;
+  margin-right: 200px;
+  font-size: 30px;
 }
 
