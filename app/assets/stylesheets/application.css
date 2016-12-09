@@ -30,7 +30,7 @@ body{
 }
 
 .name{
-  margin-top: -15px;
+  /*margin-top: -15px;*/
   font-size: auto;
 }
 
@@ -39,7 +39,7 @@ body{
   width: 200px;
   color: #212121;
   background-color: #4eb74b;
-  margin-left: 20px;
+  /*margin-left: 20px;*/
   height: 40px;
   text-align: center;
   text-decoration:none;
@@ -117,29 +117,56 @@ body{
   width:200px;
   height:200px;
   background-color: black;
+  margin: 0;
 }
 
 .overlay{
   opacity: .3;
 }
 
+.game-wrapper:hover .game-wrapper-overlay{
+  display: block;
+}
+
+.game-wrapper:hover .overlay-text{
+  display: block;
+}
+
+.game-wrapper-overlay{
+  display: none;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  opacity: .5;
+}
+
 .overlay-text{
   position: absolute;
-  margin-left: 75px;
-  margin-top: -100px;
   color: white;
   display: none;
-  z-index: 5;
 }
 
 .votedown{
-  margin-left: 90px;
-  margin-top: -165px;
+  margin-left: 130px;
+  margin-top: 20px;
 }
 
 .voteup{
-  margin-left: -10px;
-  margin-top: -165px;
+  margin-left:20px;
+  margin-top: 20px;
+}
+
+.fa-plus-circle{
+margin-left: 67px;
+margin-top: 100px;
+}
+
+.fa-check-circle{
+margin-left: 67px;
+margin-top: 100px;
+pointer-events: none;
+color: green;
 }
 
 .change-color-green{
@@ -150,11 +177,4 @@ body{
   color: red!important;
 }
 
-.fa-plus-circle{
-margin-left: 33px;
-}
-
-.fa-check-circle{
-margin-left: 33px;
-}
 
