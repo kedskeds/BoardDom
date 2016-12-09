@@ -2,24 +2,47 @@
 
 <p id="notice"><%= notice %></p>
 
-<h2 class='game-title'><%= @game.title %></h2>
+<h2 class='index-title'><%= @game.title %></h2>
 <div class="line-thing"></div>
-<div class='game-photo'>
-  <%= render partial: "game_cover", locals: {game: @game} %>
+
+<div class="profile-container">
+  <div class="user-info-container">
+
+  <div class="avatar-container">
+    <div class='game-photo'>
+      <%= render partial: "game_cover", locals: {game: @game} %>
+    </div>
+  </div>
+
+
+
+  <table class="stats-table">
+    <tr>
+      <th>Average Rating</th>
+      <td><%=@rating %>%</td>
+    </tr>
+    <tr>
+      <th>Genre</th>
+      <td>
+        <%= @game.genre %>
+      </td>
+    </tr>
+    <tr>
+      <th>Type</th>
+      <td><%=@game.category %></td>
+    </tr>
+
+  </table>
+
+  <div class="bio-container">
+        <h2>Description</h2>
+        <p>
+          <%= @game.description %>
+        </p>
+      </div>
+</div>
 </div>
 
-<p class='show-text rating-text'>Average Rating:<div class='rating'><%=@rating%></div></p>
-
-<h1><%=@rating%></h1>
-
-
-<p class='show-text genre-text'>Genre:<p class='rating genre'><%=@game.genre%></p></p>
-
-<p class='show-text category-text'>Type:<p class='rating category'><%=@game.category%></p ></p>
-
-
-
-<p class='show-text description-text'>Description:<div class='game-description '><%= @game.description %></div></p>
 
 <div class="other-line-thing"></div>
 <p class='show-text review'>Reviews</p>
