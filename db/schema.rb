@@ -59,6 +59,8 @@ ActiveRecord::Schema.define(version: 20161208181651) do
     t.string   "unlock_token"
     t.datetime "locked_at"
     t.string   "username"
+    t.string   "avatar"
+    t.string   "location"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end
