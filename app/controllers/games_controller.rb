@@ -18,6 +18,8 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
     if user_signed_in?
       @user.games << @game
+      redirect_to :back
     end
+
   end
 end

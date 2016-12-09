@@ -63,9 +63,6 @@ $(document).on('turbolinks:load', function() {
   $(".fa-arrow-circle-up").mouseout(function(){
     $(this).css('color', '#efefef')
 });
-  $(".fa-arrow-circle-up").click(function(){
-    $(this).addClass('change-color-green');
-  });
 
   $(".fa-arrow-circle-down").mouseover(function(){
     $(this).css('color', 'grey')
@@ -73,9 +70,7 @@ $(document).on('turbolinks:load', function() {
   $(".fa-arrow-circle-down").mouseout(function(){
     $(this).css('color', '#efefef')
 });
-  $(".fa-arrow-circle-down").click(function(){
-    $(this).addClass('change-color-red');
-  });
+
 
   $(".fa-plus-circle").mouseover(function(){
     $(this).css('color', 'grey')

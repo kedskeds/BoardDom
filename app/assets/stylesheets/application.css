@@ -13,6 +13,7 @@ body{
   padding: 0px;
   overflow-x: hidden;
   background-color: #292929;
+  color:#bababa;
 }
 .slick-track {
   margin: 0 auto;
@@ -212,6 +213,9 @@ margin-top: 100px;
 pointer-events: none;
 color: green;
 }
+.center-arrow{
+  margin-left: 74px;
+}
 
 .change-color-green{
   color: green!important;
@@ -232,33 +236,67 @@ color: green;
 #red {
   background-color: red;
 }
-#username-heading {
-    position: relative;
-    left: 500px;
-    bottom: 300px;
-    color: #4AAB48;
-    font-family: 'Vesper Libre', serif;
+
+/*USER PROFILE STYLES*/
+#user-avatar img{
+  height: 400px;
+  padding-left: 5%;
+  border-style: solid;
+  border-width: 10px;
 }
-#user-stats {
+
+#username-heading {
+  padding-top: 20px;
+  margin-left: 50%;
+  color: #4AAB48;
+  font-family: 'Vesper Libre', serif;
+}
+
+#stats-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#stats-subcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   color: #bababa;
+  padding-top: 3%
+}
+
+#user-bio {
+  max-width: 30%;
+}
+
+#user-owned-games {
+  padding-top: 26%
+}
+
+#user-owned-games p {
+  padding-bottom: 10px
+}
+
+#user-stats {
+  /*color: #bababa;
   position: relative;
   left: 640px;
-  bottom: 268px;
+  bottom: 268px;*/
 }
 #user-bio {
-  color: #bababa;
+  /*color: #bababa;
   width: 250px;
   position: relative;
   left: 325px;
-  bottom: 400px;
+  bottom: 400px;*/
 }
 #bio-heading {
-  position: relative;
-  left: 55px;
+  /*position: relative;
+  left: 55px;*/
 }
 #stats-heading {
-  position: relative;
-  left: 57px;
+  /*position: relative;
+  left: 57px;*/
 }
 .user-owned-games{
   margin-top: -320px;
@@ -339,12 +377,19 @@ color: green;
   margin-right: 10%;
 }
 
-
 .shared-links a {
   text-decoration: none;
   color: #bababa;
 }
-
+.unclickable{
+  pointer-events: none;
+}
+.red{
+  color: red;
+}
+.green{
+  color: green;
+}
 
 /* User Login page*/
 
@@ -421,4 +466,23 @@ color: green;
     background-color: #212121;
     height:3px;
 }
+.description-text{
+  margin-top: -260px;
+  margin-left: 60%;
+}
+.game-description{
+  display: flex;
+  font-weight: 300;
+  text-indent: 250px;
+  margin-top: -65px;
+  margin-left: 60%;
+  margin-right: 200px;
+  font-size: 30px;
+}
 
+.search-container {
+}
+
+.search-result {
+ float: left;
+}
