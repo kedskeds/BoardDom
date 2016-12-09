@@ -238,7 +238,76 @@ color: green;
 }
 
 /*USER PROFILE STYLES*/
-#user-avatar img{
+
+.profile-container {
+  padding:20px 20px;
+  text-align:center;
+}
+.user-info-container {
+  min-height:300px;
+}
+
+.avatar-container {
+  vertical-align: top;
+  display:inline-block;
+  margin:auto;
+  width:300px;
+  height:300px;
+  border:2px solid gray;
+  border-radius: 10px;
+  padding:10px;
+  margin-right:20px;
+  margin-bottom:20px;
+  padding-top:-40px;
+}
+
+.avatar-container img {
+  height:100%;
+}
+
+.stats-table {
+  margin-bottom:20px;
+  display:inline-block;
+  text-align:left;
+  color:white;
+  margin-right:20px;
+}
+
+.stats-table tr {
+  border:2px solid gray;
+}
+
+.stats-table td {
+  padding:10px;
+  padding-right:25px;
+  color:white;
+}
+
+.stats-table th {
+  color:gray;
+  text-transform: uppercase;
+  padding-right:25px;
+  padding-left:25px;
+}
+
+.bio-container {
+  vertical-align: top;
+  display:inline-block;
+  max-width:500px;
+  width:90%;
+  min-height:200px;
+  text-align:left;
+  margin-bottom:20px;
+}
+
+.owned-games-container {
+
+  /*text-align:left;*/
+  position:relative;
+  top:300px;
+}
+
+/*#user-avatar img{
   height: 400px;
   padding-left: 5%;
   border-style: solid;
@@ -250,7 +319,8 @@ color: green;
   margin-left: 50%;
   color: #4AAB48;
   font-family: 'Vesper Libre', serif;
-}
+}*/
+
 
 #stats-container {
   display: flex;
@@ -332,6 +402,10 @@ color: green;
     margin-top: 120px;
 }
 
+.edit-container {
+  margin-top: 40px
+}
+
 .login-header {
   color: #bababa;
   margin-bottom: 30px;
@@ -347,10 +421,43 @@ color: green;
   color: #4AAB48 ;
 }
 
+#under-edit {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+#under-edit form {
+  margin-right: 100px;
+  width: 30%;
+}
+
+
+#edit_user div {
+  color: #4AAB48 ;
+}
+
 #new_user input {
   width: 700px;
   height: 60px;
-  text-align: center;
+  padding: 20px;
+}
+
+.edit_user div.actions {
+  margin-top: 10px
+}
+
+#under-edit > form:nth-child(2) > input.back-button {
+  width: 160px
+}
+
+#new_user > div.actions > input[type="submit"] {
+  margin-top: 20px
+}
+
+#edit_user input{
+  width: 700px;
+  height: 60px;
   padding: 20px;
 }
 
