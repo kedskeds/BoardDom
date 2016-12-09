@@ -1,9 +1,16 @@
 <img src=<%= @user.avatar %> />
-<h1><%= @user.username %></h1>
-<ul>
-  <li><%= @user.location %></li>
-
-  <li>User since: <%= @user.created_at.strftime("%F") %></li>
-</ul>
+<h1 id="username-heading"><%= @user.username %></h1>
+<div id="user-stats">
+  <h2 id="stats-heading">Stats</h2>
+  <ul >
+    <li><%=@user.email %></li>
+    <li><%= @user.location %></li>
+    <li>User since: <%= @user.created_at.strftime("%B %e, %Y") %></li>
+  </ul>
+</div>
+<div id="user-bio">
+  <h2 id="bio-heading">Bio</h2>
+  <p><%= @user.bio%></p>
+</div>
 <!-- @user.votes.count -->
 <!-- @user.votes.where(up: true).each do |game| ...game partial... end -->
