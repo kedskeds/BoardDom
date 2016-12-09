@@ -1,0 +1,14 @@
+<h1>Search Results</h1>
+<div class="search-container">
+  <% @users.each do |user| %>
+    <div class="search-result">
+      <img src="<%= user.avatar %>" />
+      <a href="/users/<%= user.id %>"><%= user.username %></a>
+    </div>
+  <% end %>
+  <% @games.each do |game| %>
+    <div class="search-result">
+      <%= render partial: "game_cover", locals: {game: game} %>
+    </div>
+  <% end %>
+</div>
