@@ -1,32 +1,34 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+  context 'user is valid' do
+    user = User.new(username: 'Fred',
+                    email: 'fred@gmail.com',
+                    password: 'password',
+                    password_confirmation: 'password')
 
-  context "user is valid" do
-    user = User.new(username: "Fred", email: "fred@gmail.com", password: "password", password_confirmation: "password" )
-
-    it "has a username" do
-      expect(user).to have_attributes(username: "Fred")
+    it 'has a username' do
+      expect(user).to have_attributes(username: 'Fred')
     end
 
-    it "has an email" do
+    it 'has an email' do
       expect(user).to have_attributes(email: 'fred@gmail.com')
     end
 
-    it "has a valid password" do
-      expect(user.valid_password?("password")).to eq(true)
+    it 'has a valid password' do
+      expect(user.valid_password?('password')).to eq(true)
     end
 
-    it "is saved in the database" do
+    it 'is saved in the database' do
       user.save!
       last_user = User.last
       expect(last_user).to eq(user)
     end
   end
 
-  context "user is invalid" do
-    it "is not saved in the data base" do
-      user = User.create(username: "", email: "fred@gmail.com", password: "password", password_confirmation: "paswsord" )
+  context 'user is invalid' do
+    it 'is not saved in the data base' do
+      user = User.create(username: '', email: 'fred@gmail.com', password: 'password', password_confirmation: 'paswsord' )
       last_user = User.last
       expect(last_user).not_to eq(user)
     end
