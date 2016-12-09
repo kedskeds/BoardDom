@@ -2,7 +2,7 @@
 <div class="line-thing"></div>
 
 
-<p class='list-title'>Games A-Z</p>
+<p class='list-title'>All Games A-Z</p>
 
 <div class='games-row'>
   <%  @games_alphabetically.each do |game| %>
@@ -11,7 +11,7 @@
 </div>
 <div class="other-line-thing"></div>
 
-<% if user_signed_in? %>
+<% if user_signed_in? && !current_user.games.empty? %>
 <p class='list-title'>Owned Games</p>
 <div class='games-row'>
   <%  @owned_games.each do |game| %>
