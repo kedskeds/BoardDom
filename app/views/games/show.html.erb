@@ -1,17 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<h2><%= @game.title %></h2>
-  <div>
-    <%= render partial: "game_cover", locals: {game: @game} %>
-  </div>
- <h1><%=@rating%></h1>
-<p><%= @game.description %></p>
+<h2 class='game-title'><%= @game.title %></h2>
+<div class="line-thing"></div>
+<div class='game-photo'>
+  <%= render partial: "game_cover", locals: {game: @game} %>
+</div>
+
+<p class='show-text rating-text'>Average Rating:<div class='rating'><%=@rating%></div></p>
+
+<h1><%=@rating%></h1>
+
+
+<p class='show-text genre-text'>Genre:<p class='rating genre'><%=@game.genre%></p></p>
+
+<p class='show-text category-text'>Type:<p class='rating category'><%=@game.category%></p ></p>
+
+<p ><%= @game.description %></p>
 
 <p><%= link_to 'New Comment', new_game_comment_url(@game) %></p>
 
 <ul>
   <% @game.comments.each do |comment| %>
-    <li><%= comment.author.username %> - <%= comment.content %></li>
+  <li><%= comment.author.username %> - <%= comment.content %></li>
   <% end %>
 </ul>
 
