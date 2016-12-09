@@ -5,49 +5,21 @@
     <%= submit_tag "Search", :name => nil %>
 <% end %>
 
-<% @games.each_slice(3) do |game| %>
+<p>Games A-Z</p>
 <div class='games-row'>
-  <% game.each do |game| %>
-  <div class="game-wrapper">
-    <div class="game-wrapper-overlay">
-      <% if user_signed_in? %>
-      <a data-method="post" href="/games/<%=game.id%>/votes/create?up=true">
-            <div>
-              <span class='overlay-text voteup fa fa-arrow-circle-up fa-4x'></span>
-            </div>
-          </a>
-          <a data-method="post" href="/games/<%=game.id%>/votes/create?up=false">
-            <div>
-              <span class='overlay-text votedown fa fa-arrow-circle-down fa-4x'></span>
-            </div>
-          </a>
-            <% if !current_user.games.include?(game) %>
-            <a href="/games/<%=game.id%>/own">
-            <div>
-              <span class="overlay-text fa fa-plus-circle fa-5x" aria-hidden="true"></span>
-            </div>
-          </a>
-            <% else %>
-          <a href="/games/<%=game.id%>/own">
-            <div>
-              <span class="overlay-text fa fa-check-circle fa-5x" aria-hidden="true"></span>
-            </div>
-          </a>
-          <% end %>
-          <% end %>
-    </div>
-    <div class='cover-images'>
-      <div>
-        <a href="/games/<%=game.id%>">
-          <img src=<%=game.image_url%>  alt=".." />
-
-        </a>
-      </div>
-    </div>
-    <div class='name'>
-      <a class='i-own-this apply-font' href="/games/<%=game.id%>"><%= game.title %></a>
-    </div>
-  </div>
+  <%  @games_alphabetically.each do |game| %>
+    <%= render partial: "game_cover", locals: {game: game} %>
   <%end%>
 </div>
-<%end%>
+
+<% if user_signed_in? %>
+<p>Liked Games</p>
+<div class='games-row'>
+  <%  @liked_games.each do |game| %>
+    <%= render partial: "game_cover", locals: {game: game} %>
+  <%end%>
+</div>
+<% end %>
+
+
+

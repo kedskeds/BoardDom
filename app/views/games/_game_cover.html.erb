@@ -1,0 +1,39 @@
+<div class="game-wrapper">
+    <div class="game-wrapper-overlay">
+      <% if user_signed_in? %>
+        <a href="/games/<%=game.id%>/own">
+          <div>
+            <span class='overlay-text voteup fa fa-arrow-circle-up fa-4x'></span>
+          </div>
+        </a>
+        <a href="/games/<%=game.id%>/own">
+          <div>
+            <span class='overlay-text votedown fa fa-arrow-circle-down fa-4x'></span>
+          </div>
+        </a>
+        <% if !current_user.games.include?(game) %>
+          <a href="/games/<%=game.id%>/own">
+            <div>
+              <span class="overlay-text fa fa-plus-circle fa-5x" aria-hidden="true"></span>
+            </div>
+          </a>
+        <% else %>
+          <a href="/games/<%=game.id%>/own">
+            <div>
+              <span class="overlay-text fa fa-check-circle fa-5x" aria-hidden="true"></span>
+            </div>
+          </a>
+        <% end %>
+      <% end %>
+    </div>
+    <div class='cover-images'>
+      <div>
+        <a href="/games/<%=game.id%>">
+        <img src=<%=game.image_url%>  alt=".." />
+        </a>
+      </div>
+    </div>
+    <div class='name'>
+      <a class='i-own-this apply-font' href="/games/<%=game.id%>"><%= game.title %></a>
+    </div>
+  </div>

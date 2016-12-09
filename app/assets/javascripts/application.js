@@ -12,14 +12,50 @@
 
 
 //= require jquery
+//= require jquery.slick
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap
-//= require_tree
 //= require turbolinks
+//= require_tree
 
 $(document).on('turbolinks:load', function() {
 
+  $('.games-row').slick({
+      dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+  });
 
   $(".fa-arrow-circle-up").mouseover(function(){
     $(this).css('color', 'grey')
@@ -31,7 +67,6 @@ $(document).on('turbolinks:load', function() {
     $(this).addClass('change-color-green');
   });
 
-
   $(".fa-arrow-circle-down").mouseover(function(){
     $(this).css('color', 'grey')
 });
@@ -42,18 +77,12 @@ $(document).on('turbolinks:load', function() {
     $(this).addClass('change-color-red');
   });
 
-    $(".fa-plus-circle").mouseover(function(){
+  $(".fa-plus-circle").mouseover(function(){
     $(this).css('color', 'grey')
 });
   $(".fa-plus-circle").mouseout(function(){
     $(this).css('color', '#efefef')
 });
-//     $(".fa-plus-circle").click(function(){
-//     $(this).removeClass('fa-plus-circle')
-//     $(this).addClass('fa-check-circle change-color-green')
-// });
-
-
 
 })
 

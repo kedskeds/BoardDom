@@ -1,8 +1,8 @@
 class GamesController < ApplicationController
 
   def index
-    @games = Game.all
-    @first_game = Game.first
+    @games_alphabetically = Game.order(:title)
+    @liked_games = current_user.games.all
   end
 
   def show

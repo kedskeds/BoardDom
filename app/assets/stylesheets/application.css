@@ -1,5 +1,17 @@
+/*
+*= require_tree .
+*= require slick
+*= require slick-theme
+*= require_self
+*/
+
+
 body{
-  margin: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
   background-color: #292929;
 }
 
@@ -22,11 +34,13 @@ body{
 }
 
 .games-row{
-  margin-left: 10%;
+  max-width: 90%;
+  margin-left: 5%;
 }
 
 .game-wrapper {
   display: inline-block;
+  margin-left: 40px;
 }
 
 .name{
@@ -176,5 +190,24 @@ color: green;
 .change-color-red{
   color: red!important;
 }
+
+.foo {
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  border: 2px solid red;
+  z-index: 11;
+}
+
+#red {
+  background-color: red;
+}
+
+
+
+
+
+
 
 

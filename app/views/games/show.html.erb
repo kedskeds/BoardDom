@@ -1,7 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <h2><%= @game.title %></h2>
-<img src=<%= @game.image_url %> alt=<%= @game.title %> />
+  <div>
+    <%= render partial: "game_cover", locals: {game: @game} %>
+  </div>
+
 <p><%= @game.description %></p>
 
 <p><%= link_to 'New Comment', new_game_comment_url(@game) %></p>
