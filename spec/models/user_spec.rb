@@ -2,17 +2,17 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   context 'user is valid' do
-    user = User.new(username: 'Fred',
-                    email: 'fred@gmail.com',
+    user = User.new(username: 'Frank',
+                    email: 'frank@gmail.com',
                     password: 'password',
                     password_confirmation: 'password')
 
     it 'has a username' do
-      expect(user).to have_attributes(username: 'Fred')
+      expect(user).to have_attributes(username: 'Frank')
     end
 
     it 'has an email' do
-      expect(user).to have_attributes(email: 'fred@gmail.com')
+      expect(user).to have_attributes(email: 'frank@gmail.com')
     end
 
     it 'has a valid password' do
@@ -24,11 +24,11 @@ RSpec.describe User, type: :model do
       last_user = User.last
       expect(last_user).to eq(user)
     end
-    xdescribe 'rating' do
-      it 'returns the user rating of the game as a percentage' do
+
+    describe '#search' do
+      it 'searches for a user' do
         user.save!
-        last_user = User.last
-        expect(last_user.rating).to eq(0)
+        expect(User.search(user.username)).to eq(User.where("username ILIKE ? OR location ILIKE ?", "%#{user.username}%", "%#{user.username}%"))
       end
     end
   end

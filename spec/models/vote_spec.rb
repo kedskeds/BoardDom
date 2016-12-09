@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Vote, type: :model do
 
   context "user is valid" do
-    vote = Vote.new(up: true,
+    vote = Vote.new(up: 1,
                      voter_id: 1,
                      votable_id: 1,
                      votable_type: :game)
