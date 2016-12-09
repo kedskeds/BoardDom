@@ -1,8 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Game, type: :model do
-  let(:game){Game.new(title: 'Warhammer 40k', description: 'warhammer 40k description' , image_url: 'https://warhammerart.com/wp-content/uploads/2015/10/40k-book-cover-5th-ed.jpg'
-)}
+  let(:game){Game.new(title: 'Warhammer 40k',
+                      description: 'warhammer 40k description',
+                      image_url: 'https://warhammerart.com/wp-content/uploads/2015/10/40k-book-cover-5th-ed.jpg')}
   it'has a title' do
     expect(game.title).to eq('Warhammer 40k')
   end

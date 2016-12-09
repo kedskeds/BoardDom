@@ -10,7 +10,6 @@ class VotesController < ApplicationController
     #   # @vote_errors = vote.errors.full_messages
     #   render
     # end
-
   end
 end
 
