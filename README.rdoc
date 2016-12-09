@@ -3,9 +3,11 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
+Boardsy is a board game tracking social media website.
+
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 2.2.2 is required in order to run the server.
 
 * System dependencies
 
