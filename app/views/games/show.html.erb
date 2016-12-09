@@ -8,7 +8,7 @@
 
 <ul>
   <% @game.comments.each do |comment| %>
-    <li><%= comment.author %> - <%= comment.content %></li>
+    <li><%= comment.author.username %> - <%= comment.content %></li>
   <% end %>
 </ul>
 
