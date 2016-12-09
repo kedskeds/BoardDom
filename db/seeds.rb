@@ -5,6 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Game.delete_all
+User.delete_all
+Comment.delete_all
+Vote.delete_all
 
 Game.create!(title: "Warhammer 40k", description: 'warhammer 40k description' , image_url: 'https://warhammerart.com/wp-content/uploads/2015/10/40k-book-cover-5th-ed.jpg' )
 Game.create!(title: "Dungeons and Dragons", description: 'dnd description' , image_url: "http://www.planetcomicsdirect.com/images/P/DCD463898-01.jpg")
@@ -13,6 +17,7 @@ Game.create!(title: "X-Wing", description: 'X-Wing description' , image_url: "ht
 game2 = Game.create!(title: "Pandemic", description: 'pandemic description' , image_url: "https://cf.geekdo-images.com/images/pic1534148.jpg" )
 game1 = Game.create!(title: "Warhammer", description: 'warhammer description' , image_url: "https://upload.wikimedia.org/wikipedia/en/c/cc/Warhammer_8th_Edition_Cover.jpg" )
 
-user = User.create!(username:'drdynamic', email: 'email@gmail.com', password:'password')
+user = User.create!(username: "slagathor", email: 'email@gmail.com', password:'password', password_confirmation: 'password')
+
 user.games << game1
 user.games << game2

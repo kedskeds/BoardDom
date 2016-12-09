@@ -4,11 +4,9 @@
 <div class='games-row'>
   <% game.each do |game| %>
   <div class="game-wrapper">
-    <div class='cover-images'>
-      <div>
-        <a href="/games/<%=game.id%>">
-          <img src=<%=game.image_url%>  alt=".." />
-          <a href="/games/<%=game.id%>/own">
+    <div class="game-wrapper-overlay">
+      <% if user_signed_in? %>
+      <a href="/games/<%=game.id%>/own">
             <div>
               <span class='overlay-text voteup fa fa-arrow-circle-up fa-4x'></span>
             </div>
@@ -18,11 +16,26 @@
               <span class='overlay-text votedown fa fa-arrow-circle-down fa-4x'></span>
             </div>
           </a>
+            <% if !current_user.games.include?(game) %>
             <a href="/games/<%=game.id%>/own">
             <div>
               <span class="overlay-text fa fa-plus-circle fa-5x" aria-hidden="true"></span>
             </div>
           </a>
+            <% else %>
+          <a href="/games/<%=game.id%>/own">
+            <div>
+              <span class="overlay-text fa fa-check-circle fa-5x" aria-hidden="true"></span>
+            </div>
+          </a>
+          <% end %>
+          <% end %>
+    </div>
+    <div class='cover-images'>
+      <div>
+        <a href="/games/<%=game.id%>">
+          <img src=<%=game.image_url%>  alt=".." />
+
         </a>
       </div>
     </div>
