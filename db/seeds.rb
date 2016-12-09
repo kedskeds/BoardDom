@@ -17,7 +17,7 @@ Game.create!(title: "X-Wing", description: 'X-Wing description' , image_url: "ht
 game2 = Game.create!(title: "Pandemic", description: 'pandemic description' , image_url: "https://cf.geekdo-images.com/images/pic1534148.jpg" )
 game1 = Game.create!(title: "Warhammer", description: 'warhammer description' , image_url: "https://upload.wikimedia.org/wikipedia/en/c/cc/Warhammer_8th_Edition_Cover.jpg" )
 
-user = User.create!(username: "slagathor", email: 'email@gmail.com', password:'password', password_confirmation: 'password')
+user = User.create!(username: "slagathor", email: 'email@gmail.com', password:'password', password_confirmation: 'password', avatar: Faker::Avatar.image, location: "#{Faker::Address.city}, #{Faker::Address.state}")
 
 user.games << game1
 user.games << game2

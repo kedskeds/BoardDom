@@ -28,6 +28,8 @@ gem 'jquery-turbolinks'
 
 gem 'rubocop', require: false
 
+gem 'faker'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
