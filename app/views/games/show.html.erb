@@ -54,12 +54,11 @@
 
     <li class='user-comment show-text'><div class='comment-name'><%= comment.author.username %></div><div class='comment-liked'>
 
-    <% if @game.votes.include?(voter_id: comment.author_id) %>
-      <% if @game.votes.where(voter_id: comment.author_id).first.up == 1%>
-          This user liked this game
-      <% elsif @game.votes.where(voter_id: comment.author_id).first.up == 0%>
-          This user disliked this game
-      <% end %>
+    <% if @game.votes.where(voter_id: comment.author_id).first.nil? %>
+    <% elsif @game.votes.where(voter_id: comment.author_id).first.up == 1%>
+        This user liked this game
+    <% elsif @game.votes.where(voter_id: comment.author_id).first.up == 0%>
+        This user disliked this game
     <% end %>
 
     </div> "<%= comment.content%>"</li>
