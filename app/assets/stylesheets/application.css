@@ -15,6 +15,10 @@ body{
   background-color: #292929;
   color:#bababa;
 }
+
+a:hover {
+  color:#4eb74b;
+}
 .slick-track {
   margin: 0 auto;
 }
