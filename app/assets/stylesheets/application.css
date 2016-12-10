@@ -572,6 +572,7 @@ color: green;
   margin-left: 570px;
 }
 
+
 .line-thing {
     display:flex;
     width: 80%;
@@ -582,6 +583,7 @@ color: green;
     background:black;
     background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#bababa), to(#292929));
 }
+
 .other-line-thing {
   margin-top: 20px;
     display:flex;
