@@ -42,5 +42,14 @@ Manage the database:
 ```
 rails c
 ```
+###Homepage
+![](homepage.png)
+
+###User Profile
+![](userprofile.png)
+
+###Game Detail
+![](gamedetail.png)
+
 ###License
 This project is licensed under the terms of the MIT license.
