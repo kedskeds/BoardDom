@@ -1,5 +1,7 @@
 ## BoardDom
 
+![Build Status](https://travis-ci.org/kedskeds/BoardDom.svg?branch=master)
+
 ### Introduction
 
 BoardDom is a social networking application built for people who play board games. As a user, you can add a game to your collection, "like" or "dislike" a game, and search for users with similar tastes to facilitate fun and diverse board game nights.
